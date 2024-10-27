@@ -348,7 +348,7 @@ namespace EquipBestItem
             bestEquipmentUpgrader.RefreshValues();
             foreach (TroopRosterElement rosterElement in _inventoryLogic.RightMemberRoster.GetTroopRoster())
             {
-                if (rosterElement.Character.IsHero)
+                if (rosterElement.Character.IsHero && rosterElement.Character.HeroObject.IsAlive)
                     bestEquipmentUpgrader.EquipCharacter(rosterElement.Character);
             }
         }
